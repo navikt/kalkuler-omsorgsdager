@@ -1,0 +1,58 @@
+{
+  "name": "kalkuler-omsorgsdager",
+  "version": "0.0.1",
+  "description": "Kalkuler antall omsorgsdager ut i fra informasjon om barn",
+  "main": "lib/index.js",
+  "types": "lib/index.d.js",
+  "private": false,
+  "scripts": {
+    "test": "jest --maxWorkers=2 --config ./jest/jest.config.js",
+    "clean-lib": "rimraf ./lib",
+    "compile-lib-script": "tsc -p tsconfig.json",
+    "build-lib": "npm-run-all clean-lib compile-lib-script",
+    "patchit": "npm-run-all build-lib patch do-publish"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "files": [
+    "package.json",
+    "/lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/navikt/kalkuler-omsorgsdager.git"
+  },
+  "keywords": [
+    "omsorgsdager",
+    "kalkulator",
+    "sykdom-i-familien"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/navikt/kalkuler-omsorgsdager/issues"
+  },
+  "homepage": "https://github.com/navikt/kalkuler-omsorgsdager#readme",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/plugin-proposal-object-rest-spread": "^7.11.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.10.4",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-react": "^7.10.4",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@types/jest": "^26.0.14",
+    "babel-jest": "^26.3.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.4",
+    "jest": "^26.4.2",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.1.2",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^26.4.0",
+    "typescript": "^4.0.3"
+  }
+}
