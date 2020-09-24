@@ -10,7 +10,9 @@
     "clean-lib": "rimraf ./lib",
     "compile-lib-script": "tsc -p tsconfig.json",
     "build-lib": "npm-run-all clean-lib compile-lib-script",
-    "patchit": "npm-run-all build-lib patch do-publish"
+    "patchit": "npm-run-all build-lib patch do-publish",
+    "do-publish": "npm publish",
+    "patch": "npm version patch"
   },
   "directories": {
     "lib": "lib"
