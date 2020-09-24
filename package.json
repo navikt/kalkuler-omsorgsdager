@@ -1,6 +1,6 @@
 {
   "name": "@navikt/kalkuler-omsorgsdager",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Kalkuler antall omsorgsdager ut i fra informasjon om barn",
   "main": "lib/index.js",
   "types": "lib/index.d.js",
